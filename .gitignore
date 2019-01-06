@@ -1,6 +1,10 @@
+#Program
 .vs
 src/*.componentinfo.xml
 src/Debug/*
 !src/Debug/*.hex
 !src/Debug/*.elf
 !src/Debug/*.eep
+
+#Eagle
+eagle/*.s#*
