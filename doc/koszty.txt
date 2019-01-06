@@ -1,0 +1,8 @@
+Wydruk				15,00 z³
+Zasilacz 12V			25,88 z³
+Ledy UV				15,12 z³
+LED Display			 3,00 z³
+Atmega 8			 8,00 z³
+Reszta 				 5,00 z³
+----------------------------------------
+Suma				72,00 z³
