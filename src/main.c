@@ -7,13 +7,17 @@
 #include "clock_driver.h"
 #include "led_display_driver.h"
 
+void enableFastPwmOnTimer0(int defaultValue);
+void enableLedUv();
+void disableLedUv();
+
 int main(void)
 {
 	state = DISPLAY;
 	uint8_t countOfPrograms = 4, chooseProgram = 0,
-			countOfLedUvPowerOptions = 3, chooseLedUvPowerOptions = 1;
+			countOfLedUvPowerOptions = 4, chooseLedUvPowerOptions = 2;
 	int programs[] = { 30, 60, 180, TIME_LIMIT },
-		ledUvPowerOptions[] = { 76, 153, 230 }; // 30%, 60%, 90%
+		ledUvPowerOptions[] = { 38, 76, 115, 153 }; // 15%, 30%, 45%, 60%
 
 	LEDInit(3, ANODA, &DDRD, &PORTD, &DDRC, &PORTC);
 	CLOCKInit();
@@ -121,26 +125,6 @@ int main(void)
 
 			while(!(*PIN_SWITCHES & (1 << SW_PWM_LED_UV)));
 		}
-		/*else if((*PIN_SWITCHES & (1 << MOTION_DETECTOR)))
-		{
-
-			clearDisplay();
-			LEDSetValue("5");
-			// TODO
-
-			// 1. Automatycznie uruchamiamy program
-			// 2. Jesli byl uruchomiony to nic nie roibmy
-			// 3. Jesli uruchomienie zostalo wywolane tym detektorem to po zabraniu reki stop
-			// 4. Nie ma wplywu na dzialajacy program
-
-			enableLedUv();
-
-			state = DISPLAY;
-
-			//while((*PIN_SWITCHES & (1 << MOTION_DETECTOR))); // czy ma sens blokada programu az detektor ruchu pokaze logiczne 0?
-
-			//disableLedUv();
-		}*/
 	}
 }
 

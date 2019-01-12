@@ -133,6 +133,4 @@ void CLOCKInit()
 
 	TCNT2 = 0;
 	TCCR2 = (1 << CS22) | (1 << CS20);
-
-	//while(ASSR & 0x07);
 }
