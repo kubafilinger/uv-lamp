@@ -7,6 +7,11 @@
 #include "clock_driver.h"
 #include "led_display_driver.h"
 
+void enableLedUv();
+void disableLedUv();
+uint8_t isEanbleLedUv();
+void enableFastPwmOnTimer0(int);
+
 int main(void)
 {
 	state = DISPLAY;
@@ -121,11 +126,12 @@ int main(void)
 
 			while(!(*PIN_SWITCHES & (1 << SW_PWM_LED_UV)));
 		}
-		/*else if((*PIN_SWITCHES & (1 << MOTION_DETECTOR)))
+
+		if((*PIN_SWITCHES & (1 << MOTION_DETECTOR)) && !CLOCKIsActive())
 		{
 
+
 			clearDisplay();
-			LEDSetValue("5");
 			// TODO
 
 			// 1. Automatycznie uruchamiamy program
@@ -133,14 +139,16 @@ int main(void)
 			// 3. Jesli uruchomienie zostalo wywolane tym detektorem to po zabraniu reki stop
 			// 4. Nie ma wplywu na dzialajacy program
 
-			enableLedUv();
+				enableLedUv();
 
 			state = DISPLAY;
 
 			//while((*PIN_SWITCHES & (1 << MOTION_DETECTOR))); // czy ma sens blokada programu az detektor ruchu pokaze logiczne 0?
 
 			//disableLedUv();
-		}*/
+		} else if(!CLOCKIsActive()) {
+			disableLedUv();
+		}
 	}
 }
 
@@ -161,4 +169,10 @@ void enableLedUv()
 void disableLedUv()
 {
 	TCCR0 &= ~(1 << COM01); // Normal port operation, OC0 disconnected
+}
+
+uint8_t isEanbleLedUv() {
+	if(TCCR0 & (1 << COM01)) return 1;
+
+	return 0;
 }
