@@ -8,3 +8,6 @@ src/Debug/*
 
 #Eagle
 eagle/*.s#*
+
+#Static
+images
