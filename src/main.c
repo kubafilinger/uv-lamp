@@ -15,9 +15,9 @@ int main(void)
 {
 	state = DISPLAY;
 	uint8_t countOfPrograms = 4, chooseProgram = 0,
-			countOfLedUvPowerOptions = 4, chooseLedUvPowerOptions = 2;
+			countOfLedUvPowerOptions = 5, chooseLedUvPowerOptions = 3;
 	int programs[] = { 30, 60, 180, TIME_LIMIT },
-		ledUvPowerOptions[] = { 38, 76, 115, 153 }; // 15%, 30%, 45%, 60%
+		ledUvPowerOptions[] = { 76, 115, 153, 191, 229 }; // 30%, 45%, 60%, 75%, 90%
 
 	LEDInit(3, ANODA, &DDRD, &PORTD, &DDRC, &PORTC);
 	CLOCKInit();
