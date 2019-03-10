@@ -1,0 +1,28 @@
+Partlist exported from Z:/Electronic/projekty/_my-work/uv-lamp/eagle/switches_schema.sch at 10.03.2019 23:56
+
+Part       Value   Device          Package      Description                
+C8         100nF   C-EU025-024X044 C025-024X044 CAPACITOR, European symbol 
+C9         100nF   C-EU025-024X044 C025-024X044 CAPACITOR, European symbol 
+C10        100nF   C-EU025-024X044 C025-024X044 CAPACITOR, European symbol 
+C11        100nF   C-EU025-024X044 C025-024X044 CAPACITOR, European symbol 
+C12        100nF   C-EU025-024X044 C025-024X044 CAPACITOR, European symbol 
+DIS1       HD-H103 HD-H103         HDSP-M       LED DISPLAY                
+DIS2       HD-H103 HD-H103         HDSP-M       LED DISPLAY                
+DIS3       HD-H103 HD-H103         HDSP-M       LED DISPLAY                
+DOWN               10-XX           B3F-10XX     OMRON SWITCH               
+JP2                PINHD-1X2       1X02         PIN HEADER                 
+JP4                PINHD-1X8       1X08         PIN HEADER                 
+JP6                PINHD-1X3       1X03         PIN HEADER                 
+JP7                PINHD-1X5       1X05         PIN HEADER                 
+LIGHT              10-XX           B3F-10XX     OMRON SWITCH               
+PROGRAM            10-XX           B3F-10XX     OMRON SWITCH               
+R2                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R3                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R4                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R5                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R6                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R8                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R9                 R-EU_0204/7     0204/7       RESISTOR, European symbol  
+R15                R-EU_0204/7     0204/7       RESISTOR, European symbol  
+START/STOP         10-XX           B3F-10XX     OMRON SWITCH               
+UP                 10-XX           B3F-10XX     OMRON SWITCH               
